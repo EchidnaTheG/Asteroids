@@ -10,8 +10,10 @@ def main():
    updatable_group = pygame.sprite.Group()
    drawable_group = pygame.sprite.Group()
    asteroid_group = pygame.sprite.Group()
+   shot_group = pygame.sprite.Group()
    Player.containers = (updatable_group, drawable_group)
    Asteroid.containers = (asteroid_group, updatable_group, drawable_group)
+   
    x= SCREEN_WIDTH/2
    y= SCREEN_HEIGHT/2
    player= Player(x, y)
