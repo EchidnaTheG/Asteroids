@@ -4,7 +4,6 @@ from player import *
 from asteroid import *
 from circleshape import *
 from asteroidfield import *
-import sys
 
 def main():
    updatable_group = pygame.sprite.Group()
@@ -30,11 +29,6 @@ def main():
        updatable_group.update(dt)
        for sprite in drawable_group:
            sprite.draw(screen)
-       for asteroid in asteroid_group:
-           if asteroid.check_collision(player):
-               print("GAME OVER!")
-               pygame.quit()
-               sys.exit()
        pygame.display.flip()
        dt=TimeClock.tick(60)/1000
        
